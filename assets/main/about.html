@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <script src="jquery.js"></script>
+  <title>About Us</title>
+  <style>
+    .container {
+      width: 100%;
+      min-height: 200px;
+      font-family: "Montserrat", sans-serif;
+    }
+    body {
+      display: grid;
+      background: #f1f1f1
+    }
+    header {
+      position: fixed;
+      background: #ffffff;
+      top: 0;
+      left: 0;
+      padding: 0 100px;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px rgb(109,109,109);
+    }
+
+    header .logo {
+      font-family: 'Exo';
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
+      float: left;
+      font-weight: bold;
+    }
+
+    header img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      float: left;
+      margin: 0;
+      padding: 2px 2px;
+      margin-left: 10px;
+    }
+
+    header nav {
+      float: right;
+    }
+
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header nav ul li {
+      list-style: none;
+    }
+
+    header nav ul li a {
+      color: rgb(83, 83, 83);
+      height: 60px;
+      line-height: 60px;
+      padding: 0 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    header nav ul li a:hover,
+    header nav ul li a.active {
+      color: #ffffff;
+      background-color: #aaaaaa;
+    }
+
+    .menu-toggle {
+      color: rgb(94, 94, 94);
+      float: right;
+      line-height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* responsive */
+
+@media (max-width: 650px) {
+      header {
+        padding: 0 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s all;
+      }
+
+      header nav.active {
+        left: 0;
+      }
+
+      header nav ul {
+        display: block;
+        text-align: center;
+      }
+      header nav ul li a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgb(255, 255, 255);
+      }
+    }
+    .card {
+      background-color: white;
+      padding: 10px;
+      margin-top: 70px;
+      margin-left: 12px;
+      width: 95%;
+      box-shadow: 0 2px 5px rgb(109,109,109);
+    }
+    p {
+      text-align: justify;
+    }
+    .paragraph {
+      width: 95%;
+      margin: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      height: 25px;
+      width: 100%;
+    }
+    li {
+      float: left;
+      text-align: center;
+      color: white;
+    }
+    .right-bar {
+      background-color: #a29e9e;
+      height: 19.5px;
+    }
+    table {
+      background-color: #0A0909;
+      border-collapse: collapse;
+      box-shadow: 0 2px 5px rgb(109,109,109);
+      color: white;
+      margin-left: 12px;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 97.4%;
+    }
+@media screen and (max-width: 800px) {
+      .card {
+        margin-left: 0;
+      }
+      table {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="picture.jpg"><a href="profil.html" style="text-decoration: none">
+          NKM</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fa fa-bars"></i>
+      </div>
+    </header>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-toggle").click(function () {
+          $('nav').toggleClass('active');
+        })
+      })
+    </script>
+    <div class="card">
+      <h2>About</h2>
+      <div class="paragraph">
+        <p>
+          Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        </p>
+      </div>
+      <h3>My Skills</h3>
+      <p>
+        Modification and tweaking
+      </p>
+      <ul>
+        <li style="width:85%; background-color:#403c3c">85%</li>
+        <li class="right-bar" style="width:15%"></li>
+      </ul>
+      <p>
+        Web Design
+      </p>
+      <ul>
+        <li style="width:90%; background-color:#403c3c">90%</li>
+        <li class="right-bar" style="width:10%"></li>
+      </ul>
+      <p>
+        Video Editing
+      </p>
+      <ul>
+        <li style="width:90%; background-color:#403c3c">90%</li>
+        <li class="right-bar" style="width:10%"></li>
+      </ul>
+    </div>
+    <table>
+      <tr>
+        <th>2</th>
+        <th>10+</th>
+      </tr>
+      <tr>
+        <td>Partner</td>
+        <td>Project Done</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
