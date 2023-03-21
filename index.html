@@ -27,9 +27,7 @@
       background: linear-gradient(30deg,#000000 0%,#161b1d,#2F4F4F,#2C3531);
     }
     .card-read-more {
-      border-top: 1px solid #D4D4D4;
-    }
-    .card-read-more a {
+      float: right;
       text-decoration: none;
       padding: 10px;
       font-weight: 600;
@@ -52,7 +50,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <div class="container">
       <div class="d-flex">
-        <img src="/assets/main/picture.jpg" style="heigh:40px;width:40px;border-radius:50%">
+        <img src="https://iili.io/HhuO4M7.jpg" alt="picture" border="0" style="heigh:40px;width:40px;border-radius:50%">
         <a class="navbar-brand" style="margin-left: 10px;color:#1E90FF" href="/assets/main/profile.html">NKM</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -193,17 +191,15 @@
       </div>
     </div>
     <div class="col-12 col-lg-4">
-      <div class="card m-2 text-center" style="background: linear-gradient(to bottom right ,#000000,#1c2325,#394446,#353a3c)">
-        <div class="align-items-center m-2">
-          <img src="/assets/main/picture.jpg" style="width:180px;heigh:180px;border-radius:50%">
+      <div class="card m-3" style="background: linear-gradient(to top left ,#000000,#1c2325,#394446,#353a3c)">
+        <div class="d-flex m-3">
+          <img src="https://iili.io/HhuO4M7.jpg" alt="picture" border="5px" style="width:80px;heigh:80px;border-radius:50%">
+          <a class="card-read-more" href="/assets/main/profile.html" class="btn btn-link btn-block">Follow</a>
         </div>
-        <div class="card-text text-white">
+        <div class="text-white m-3 mt-0 mb-0">
           <p>
             See our social media accounts
           </p>
-          <div class="card-read-more">
-            <a href="/assets/main/profile.html" class="btn btn-link btn-block">Click Here</a>
-          </div>
         </div>
       </div>
     </div>
